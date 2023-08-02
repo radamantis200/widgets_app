@@ -16,12 +16,12 @@ class MenuItem {
 final List<MenuItem> appMenuItems = [
   MenuItem(
       title: 'Buttom',
-      subtitle: 'Menus variado',
+      subtitle: 'Botones variados',
       icon: Icons.bubble_chart,
       url: '/buttoms'),
   MenuItem(
       title: 'Card',
-      subtitle: 'Card personlizate',
+      subtitle: 'Tarjetas personalizado',
       icon: Icons.card_giftcard,
       url: '/cards')
 ];
