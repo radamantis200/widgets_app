@@ -23,5 +23,10 @@ final List<MenuItem> appMenuItems = [
       title: 'Card',
       subtitle: 'Tarjetas personalizado',
       icon: Icons.card_giftcard,
-      url: '/cards')
+      url: '/cards'),
+  MenuItem(
+      title: 'Progress Indicator',
+      subtitle: 'Indicador de progreso infinito y controlado',
+      icon: Icons.card_giftcard,
+      url: '/progress')
 ];
