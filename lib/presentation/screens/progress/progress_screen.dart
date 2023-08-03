@@ -61,7 +61,7 @@ class _ProgressIndicatorView extends StatelessWidget {
                 value: progressValue,
               ),
               const SizedBox(
-                height: 20,
+                width: 20,
               ),
               Expanded(
                 child: LinearProgressIndicator(
