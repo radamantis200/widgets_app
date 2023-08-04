@@ -25,8 +25,13 @@ final List<MenuItem> appMenuItems = [
       icon: Icons.card_giftcard,
       url: '/cards'),
   MenuItem(
-      title: 'Progress Indicator',
+      title: 'Progress Indicators',
       subtitle: 'Indicador de progreso infinito y controlado',
       icon: Icons.card_giftcard,
-      url: '/progress')
+      url: '/progress'),
+  MenuItem(
+      title: 'Snackbars y diálogos',
+      subtitle: 'Indicador en la pantalla',
+      icon: Icons.info_outline,
+      url: '/snackbars')
 ];
