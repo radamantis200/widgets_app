@@ -43,5 +43,10 @@ final List<MenuItem> appMenuItems = [
       title: 'UI Controls + Tiles',
       subtitle: 'Una serie de controles de Flutter',
       icon: Icons.car_rental_outlined,
-      url: '/ui-controls')
+      url: '/ui-controls'),
+  MenuItem(
+      title: 'App tutorial',
+      subtitle: 'Small tutorial',
+      icon: Icons.access_time_rounded,
+      url: '/app-tutorial')
 ];
