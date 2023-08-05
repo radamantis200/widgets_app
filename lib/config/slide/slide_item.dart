@@ -7,7 +7,7 @@ class SlideItem {
       {required this.title, required this.caption, required this.imageUrl});
 }
 
-final slide = [
+final List<SlideItem> slides = [
   SlideItem(
       title: 'Qui ex eiusmod irure non velit adipisicing sint.',
       caption:

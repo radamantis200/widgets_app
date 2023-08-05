@@ -47,6 +47,6 @@ final List<MenuItem> appMenuItems = [
   MenuItem(
       title: 'App tutorial',
       subtitle: 'Small tutorial',
-      icon: Icons.access_time_rounded,
+      icon: Icons.accessible_rounded,
       url: '/app-tutorial')
 ];

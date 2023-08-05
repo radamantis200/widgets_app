@@ -25,12 +25,12 @@ class CustomPageView extends StatelessWidget {
     return Stack(
       children: [
         PageView(
-          physics: const BouncingScrollPhysics(),
-            children: slide
-                .map((e) => _ImageSlide(
-                      title: e.title,
-                      caption: e.caption,
-                      imageUrl: e.imageUrl,
+            physics: const BouncingScrollPhysics(),
+            children: slides
+                .map((slide) => _Slide(
+                      title: slide.title,
+                      caption: slide.caption,
+                      imageUrl: slide.imageUrl,
                     ))
                 .toList()),
         Positioned(
@@ -46,11 +46,11 @@ class CustomPageView extends StatelessWidget {
   }
 }
 
-class _ImageSlide extends StatelessWidget {
+class _Slide extends StatelessWidget {
   final String title;
   final String caption;
   final String imageUrl;
-  const _ImageSlide(
+  const _Slide(
       {required this.title, required this.caption, required this.imageUrl});
 
   @override
@@ -59,27 +59,29 @@ class _ImageSlide extends StatelessWidget {
     final subCaptionStyle = Theme.of(context).textTheme.bodySmall;
 
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Image.asset(imageUrl),
-          const SizedBox(
-            height: 20,
-          ),
-          Text(
-            title,
-            style: captionStyle,
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          Text(
-            caption,
-            style: subCaptionStyle,
-          ),
-        ],
+      padding: const EdgeInsets.symmetric(horizontal: 30),
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Image.asset(imageUrl),
+            const SizedBox(
+              height: 20,
+            ),
+            Text(
+              title,
+              style: captionStyle,
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Text(
+              caption,
+              style: subCaptionStyle,
+            ),
+          ],
+        ),
       ),
     );
   }
