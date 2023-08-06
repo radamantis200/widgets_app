@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:animate_do/animate_do.dart';
+
 import 'package:widgets_app/config/slide/slide_item.dart';
 
 class AppTutorialScreen extends StatelessWidget {
@@ -10,21 +12,50 @@ class AppTutorialScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
+      backgroundColor: Colors.white,
       body: CustomPageView(),
     );
   }
 }
 
-class CustomPageView extends StatelessWidget {
+class CustomPageView extends StatefulWidget {
   const CustomPageView({
     super.key,
   });
+
+  @override
+  State<CustomPageView> createState() => _CustomPageViewState();
+}
+
+class _CustomPageViewState extends State<CustomPageView> {
+  bool endReached = false;
+  final PageController _controller = PageController();
+
+  @override
+  void initState() {
+    super.initState();
+    _controller.addListener(() {
+      final page = _controller.page ?? 0;
+      if (!endReached && page >= (slides.length - 1.5)) {
+        setState(() {
+          endReached = true;
+        });
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _controller.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         PageView(
+            controller: _controller,
             physics: const BouncingScrollPhysics(),
             children: slides
                 .map((slide) => _Slide(
@@ -41,6 +72,20 @@ class CustomPageView extends StatelessWidget {
                   context.pop();
                 },
                 child: const Text('Skip'))),
+        endReached
+            ? Positioned(
+                bottom: 30,
+                right: 30,
+                child: FadeIn(
+                  animate: true,
+                  duration: const Duration(seconds: 2),
+                  child: FilledButton(
+                      onPressed: () => context.pop(),
+                      child: const Text('Start')),
+                ))
+            : const SizedBox(
+                height: 20,
+              )
       ],
     );
   }
