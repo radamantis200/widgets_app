@@ -15,6 +15,11 @@ class MenuItem {
 
 final List<MenuItem> appMenuItems = [
   MenuItem(
+      title: 'Counter',
+      subtitle: 'Counter App',
+      icon: Icons.countertops,
+      url: '/counter_screen'),
+  MenuItem(
       title: 'Buttom',
       subtitle: 'Botones variados',
       icon: Icons.bubble_chart,

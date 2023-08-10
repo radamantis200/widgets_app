@@ -1,6 +1,8 @@
+
 export 'package:widgets_app/presentation/screens/home/home_screen.dart';
 export 'package:widgets_app/presentation/screens/card/card_screen.dart';
 export 'package:widgets_app/presentation/screens/buttom/buttom_screen.dart';
+export 'package:widgets_app/presentation/screens/counter/counter_screen.dart';
 export 'package:widgets_app/presentation/screens/progress/progress_screen.dart';
 export 'package:widgets_app/presentation/screens/animated/animated_screen.dart';
 export 'package:widgets_app/presentation/screens/snackbar/snackbar_screen.dart';

@@ -10,6 +10,10 @@ final router = GoRouter(
       builder: (context, state) => const HomeScreen(),
     ),
     GoRoute(
+      path: '/counter_screen',
+      builder: (context, state) => const CounterScreen(),
+    ),
+    GoRoute(
       path: '/buttoms',
       builder: (context, state) => const ButtomScreen(),
     ),
