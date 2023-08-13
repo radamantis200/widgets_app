@@ -9,7 +9,7 @@ class Theme extends _$Theme {
   @override
   bool build() => false;
 
-  voidChange() {
+  void voidChange() {
     state = !state;
   }
 }
