@@ -41,5 +41,9 @@ final router = GoRouter(
       path: '/app-tutorial',
       builder: (context, state) => const AppTutorialScreen(),
     ),
+    GoRoute(
+      path: '/theme-changer',
+      builder: (context, state) => const ThemeChangerScreen(),
+    ),
   ],
 );

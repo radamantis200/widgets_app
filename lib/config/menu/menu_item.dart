@@ -17,22 +17,22 @@ final List<MenuItem> appMenuItems = [
   MenuItem(
       title: 'Counter',
       subtitle: 'Counter App',
-      icon: Icons.countertops,
+      icon: Icons.add,
       url: '/counter_screen'),
   MenuItem(
       title: 'Buttom',
       subtitle: 'Botones variados',
-      icon: Icons.bubble_chart,
+      icon: Icons.smart_button_outlined,
       url: '/buttoms'),
   MenuItem(
       title: 'Card',
       subtitle: 'Tarjetas personalizado',
-      icon: Icons.card_giftcard,
+      icon: Icons.credit_card,
       url: '/cards'),
   MenuItem(
       title: 'Progress Indicators',
       subtitle: 'Indicador de progreso infinito y controlado',
-      icon: Icons.card_giftcard,
+      icon: Icons.refresh_rounded,
       url: '/progress'),
   MenuItem(
       title: 'Snackbars y diálogos',
@@ -52,6 +52,11 @@ final List<MenuItem> appMenuItems = [
   MenuItem(
       title: 'App tutorial',
       subtitle: 'Small tutorial',
-      icon: Icons.accessible_rounded,
-      url: '/app-tutorial')
+      icon: Icons.list_alt_outlined,
+      url: '/app-tutorial'),
+  MenuItem(
+      title: 'Cambiar tema',
+      subtitle: 'Cambiar tema de la aplicación',
+      icon: Icons.color_lens_outlined,
+      url: '/theme-changer')
 ];
